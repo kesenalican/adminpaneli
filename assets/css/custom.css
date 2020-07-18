@@ -2,9 +2,12 @@
 
 
     .avatar{
-        width: 124px;
-        height: 124px;
-        margin: 50px;
-        position: relative;
+      margin-right: 20px;
+      margin-top: 5px;
+
         
+    } 
+
+    .text-align{
+        text-align: center;
     }
