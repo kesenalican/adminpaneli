@@ -56,13 +56,13 @@
                     <li>
                         <a href="../examples/notifications.html">
                             <i class="now-ui-icons ui-1_bell-53"></i>
-                            <p>Notifications</p>
+                            <p>BİLDİRİM GÖNDER</p>
                         </a>
                     </li>
                     <li>
                         <a href="../examples/user.html">
                             <i class="now-ui-icons location_map-big"></i>
-                            <p>User Profile</p>
+                            <p>İSTATİSTİKLER</p>
                         </a>
                     </li>
                     <li>
@@ -72,12 +72,7 @@
                         </a>
                     </li>
                     
-                    <li>
-                        <a href="../examples/typography.html">
-                            <i class="now-ui-icons text_caps-small"></i>
-                            <p>Typography</p>
-                        </a>
-                    </li>
+                 
                     <li class="active-pro">
                         <a href="../examples/upgrade.html">
                             <i class="now-ui-icons arrows-1_cloud-download-93"></i>
@@ -99,7 +94,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">Maps</a>
+                        <a class="navbar-brand" href="#pablo">Bölümler</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -149,55 +144,89 @@
                     </div>
                 </div>
             </nav>
+            
             <!-- End Navbar -->
+            
             <div class="panel-header panel-header-sm">
             </div>
             <div class="content">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card ">
-                            <div class="card-header ">
-                                Google Maps
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Bölümler Tablosu</h4>
+                                <button class="btn btn-primary btn-block">BÖLÜM OLUŞTUR +</button>
                             </div>
-                            <div class="card-body ">
-                                <div id="map" class="map"></div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class=" text-primary">
+                                            <th>
+                                                Bölüm Adları
+                                            </th>
+                                        
+                                            <th>
+                                                Sınav Sayısı
+                                            </th>
+                                            <th>
+                                                Bölüm Detay
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                  Tanışalım
+                                                   
+                                                </td>
+                                                <td>
+                                                    3
+                                                </td>
+                                                
+                                                <td class="text-right">
+                                                    <a href="../examples/bolum_detay.html">
+                                                        <button class="btn btn-primary btn-block">BÖLÜM DETAY</button>
+                                                    </a>
+                                                       
+                                                </td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   Meslekler
+                                                </td>
+                                                <td>
+                                                    5
+                                                </td>
+                                               
+                                                <td class="text-right">
+                                                    <button class="btn btn-primary btn-block">BÖLÜM DETAY</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Hayvanlar
+                                                </td>
+                                                <td>
+                                                   4
+                                                </td>
+                                               
+                                                <td class="text-right">
+                                                    <button class="btn btn-primary btn-block">BÖLÜM DETAY</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
+                   
                 </div>
             </div>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="https://www.creative-tim.com">
-                                    Creative Tim
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://presentation.creative-tim.com">
-                                    About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://blog.creative-tim.com">
-                                    Blog
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="copyright">
-                        &copy;
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script>, Designed by
-                        <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-                    </div>
-                </div>
-            </footer>
+        
         </div>
+           
     </div>
 </body>
 <!--   Core JS Files   -->

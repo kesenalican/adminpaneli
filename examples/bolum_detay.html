@@ -41,19 +41,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../examples/tables.html">
+                        <a href="../tables.html">
                             <i class="now-ui-icons users_single-02"></i>
                             <p>Üyeler</p>
                         </a>
                     </li>
-                    
-                    <li>
+                   
+                    <li class="active">
                         <a href="../examples/map.html">
                             <i class="now-ui-icons design_bullet-list-67"></i>
                             <p>BÖLÜMLER</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="../examples/notifications.html">
                             <i class="now-ui-icons ui-1_bell-53"></i>
                             <p>BİLDİRİM GÖNDER</p>
@@ -68,11 +68,11 @@
                     <li>
                         <a href="../examples/icons.html">
                             <i class="now-ui-icons education_atom"></i>
-                            <p>BÖLÜMLER</p>
+                            <p>MAPS</p>
                         </a>
                     </li>
                     
-                 
+                   
                     <li class="active-pro">
                         <a href="../examples/upgrade.html">
                             <i class="now-ui-icons arrows-1_cloud-download-93"></i>
@@ -94,7 +94,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">BİLDİRİMLER</a>
+                        <a class="navbar-brand" href="#pablo">Bölüm Detay</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -144,78 +144,97 @@
                     </div>
                 </div>
             </nav>
+            
             <!-- End Navbar -->
-            <div class="panel-header">
-                <div class="header text-center">
-                    <h2 class="title">Bildirim Gönder</h2>
-                    
-                </div>
+            
+            <div class="panel-header panel-header-sm">
             </div>
             <div class="content">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Bildirim İçeriği</h4>
+                                <h4 class="card-title">Tanışalım Bölümü</h4>
+                                    <button class="btn btn-primary btn-block" id="myBtn">SINAV OLUŞTUR +</button>
+                                    <!-- Kendi Kodlarım-->
+                                    <div id="myModal" class="modal col-md-8">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                          <span class="close">&times;</span>
+                                          <p>Lütfen Soru Tipini Seçiniz</p>
+                                          <a href="../examples/dogru_anlami_isaretle.html">
+                                            <button class="btn btn-primary btn-block col-md-4">Doğru Anlamı İşaretle</button>
+                                        </a>
+                                              <button class="btn btn-primary btn-block col-md-4">Türkçe Yaz</button>
+                                                <button class="btn btn-primary btn-block col-md-4">Eksik Kelime</button>
+                                                  <button class="btn btn-primary btn-block col-md-4">Türkçe'ye Çevir</button>
+                                        </div>
+                                      </div>
                             </div>
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="">Bildirimi Gönderiniz</label>
-                                            <input type="email" class="form-control" placeholder="Bildirim Mesajı">
-                                        </div>
-                                        <div class="col-md-4">
-
-                                            <button class="btn btn-primary btn-block">Soruyu Kaydet</button>
-                                        </div>
-                                    </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class=" text-primary">
+                                            <th>
+                                                Sınav Adları
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                  Tanışalım-1 
+                                                   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Tanışalım-2 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Tanışalım-3 
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-
-
-                            </form>
-                            
+                            </div>
                         </div>
                     </div>
-                   
-                       
                     
-                </div>
-            </div>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="https://www.creative-tim.com">
-                                    Creative Tim
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://presentation.creative-tim.com">
-                                    About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://blog.creative-tim.com">
-                                    Blog
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="copyright">
-                        &copy;
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script>, Designed by
-                        <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
+                
+    
 </body>
+
+<!-- Alert dialog Soru tipi seçme js kodları -->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
 <script src="../assets/js/core/popper.min.js"></script>
@@ -231,5 +250,11 @@
 <script src="../assets/js/now-ui-dashboard.js?v=1.0.1"></script>
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/demo/demo.js"></script>
+<script>
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initGoogleMaps();
+    });
+</script>
 
 </html>
