@@ -7,7 +7,8 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Now UI Dashboard by Creative Tim</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -25,14 +26,14 @@
             <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
-    <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-            MY
-        </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-           Misha Yazılım
-        </a>
-    </div>
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+                    MY
+                </a>
+                <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+                    Misha Yazılım
+                </a>
+            </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li>
@@ -47,7 +48,7 @@
                             <p>Üyeler</p>
                         </a>
                     </li>
-                   
+
                     <li>
                         <a href="../examples/map.html">
                             <i class="now-ui-icons design_bullet-list-67"></i>
@@ -72,8 +73,8 @@
                             <p>MAPS</p>
                         </a>
                     </li>
-                   
-                  
+
+
                     <li class="active-pro">
                         <a href="../examples/upgrade.html">
                             <i class="now-ui-icons arrows-1_cloud-download-93"></i>
@@ -97,7 +98,8 @@
                         </div>
                         <a class="navbar-brand" href="#pablo">Üyeler</a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -121,7 +123,9 @@
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="http://example.com"
+                                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
                                     <i class="now-ui-icons location_world"></i>
                                     <p>
                                         <span class="d-lg-none d-md-block">Some Actions</span>
@@ -160,10 +164,10 @@
                                         <button class="btn btn-primary btn-block col-md-2">ÜYE OLUŞTUR +</button>
 
                                     </a>
-                                    
+
 
                                 </div>
-                              
+
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -172,7 +176,7 @@
                                             <th>
                                                 Kullanıcı
                                             </th>
-                                        
+
                                             <th>
                                                 E-Posta
                                             </th>
@@ -183,66 +187,45 @@
                                                 Üye Detay
                                             </th>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar border-gray" src="../assets/img//mike.jpg" alt="..."> Alican Kesen
-                                                   
-                                                </td>
-                                                <td>
-                                                    example@gmail.com
-                                                </td>
-                                                <td>
-                                                   15
-                                                </td>
-                                                <td class="text-right">
-                                                    <a href="../examples/uye_detay.html">
-                                                        <button class="btn btn-primary btn-block">ÜYE DETAY</button>
-                                                    </a>
-                                                        
-                                                  
-                                                </td>
-                                               
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar border-gray" src="../assets/img//fotom.jpg" alt="...">  Mehmet Öztürk
-                                                </td>
-                                                <td>
-                                                    mehmet@gmail.com
-                                                </td>
-                                                <td>
-                                                    13
-                                                </td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-primary btn-block">ÜYE DETAY</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar border-gray" src="../assets/img//fotom2.jpg" alt="..."> Polat Alemdar
-                                                </td>
-                                                <td>
-                                                    polat@gmail.com
-                                                </td>
-                                                <td>
-                                                    5
-                                                </td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-primary btn-block">ÜYE DETAY</button>
-                                                </td>
-                                            </tr>
+                                        <tbody id = "UyeTable" name="ssf">
+                                             
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-               
-            
-        </div>
-    </div>
+
+
+
+                </div>
+            </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAQLZskKTK8dy2m5l4s_omVCu9dX-Qx2TU",
+        authDomain: "ingilizce-uygulama.firebaseapp.com",
+        databaseURL: "https://ingilizce-uygulama.firebaseio.com",
+        projectId: "ingilizce-uygulama",
+        storageBucket: "ingilizce-uygulama.appspot.com",
+        messagingSenderId: "1030944748630",
+        appId: "1:1030944748630:web:886ee4a9bea6a2c903b7f7",
+        measurementId: "G-B7VLPNCBSN"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="../functions/showUsers.js"></script>
 </body>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>

@@ -163,7 +163,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Üye Adı</label>
-                                                <input type="email" class="form-control" placeholder="Ad..">
+                                                <input id = "userName" type="userName" class="form-control" placeholder="Ad..">
                                             </div>
                                         </div>
                                     </div>
@@ -171,13 +171,13 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Üye Soyadı</label>
-                                                <input type="text" class="form-control" placeholder="Soyad..">
+                                                <input id = "userSurname" type="text" class="form-control" placeholder="Soyad..">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>E-Mail Adresi</label>
-                                                <input type="text" class="form-control" placeholder="E-mail..">
+                                                <input id = "userEmail" type="text" class="form-control" placeholder="E-mail..">
                                             </div>
                                         </div>
                                     </div>
@@ -185,7 +185,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group customVerticalMargin">
                                                 <label for="img">Resim Seçiniz</label>
-                                                <input type="file" id="img" name="img" accept="image/*">
+                                                <input id = "userImage" type="file" name="img" accept="image/*">
                                                 <input type="submit">
                                             </div>
                                         </div>
@@ -194,7 +194,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
 
-                                            <button class="btn btn-primary btn-block">Üyeyi Kaydet</button>
+                                            <button id = "addUserButton" class="btn btn-primary btn-block">Üyeyi Kaydet</button>
 
                                         </div>
                                         
@@ -239,6 +239,34 @@
             </footer>
         </div>
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAQLZskKTK8dy2m5l4s_omVCu9dX-Qx2TU",
+    authDomain: "ingilizce-uygulama.firebaseapp.com",
+    databaseURL: "https://ingilizce-uygulama.firebaseio.com",
+    projectId: "ingilizce-uygulama",
+    storageBucket: "ingilizce-uygulama.appspot.com",
+    messagingSenderId: "1030944748630",
+    appId: "1:1030944748630:web:886ee4a9bea6a2c903b7f7",
+    measurementId: "G-B7VLPNCBSN"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="../functions/addNewUser.js"></script>
+
 </body>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
