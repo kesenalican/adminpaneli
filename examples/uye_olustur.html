@@ -47,7 +47,7 @@
                             <p>Üyeler</p>
                         </a>
                     </li>
-                   
+                    
                     <li>
                         <a href="../examples/map.html">
                             <i class="now-ui-icons design_bullet-list-67"></i>
@@ -69,7 +69,7 @@
                     <li>
                         <a href="../examples/icons.html">
                             <i class="now-ui-icons education_atom"></i>
-                            <p>MAPS</p>
+                            <p>BÖLÜMLER</p>
                         </a>
                     </li>
                    
@@ -95,7 +95,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">Üyeler</a>
+                        <a class="navbar-brand" href="#pablo">Üye Oluştur</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -103,6 +103,7 @@
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <!-- Arama Kısmı -->
                         <form>
                             <div class="input-group no-border">
                                 <input type="text" value="" class="form-control" placeholder="Ara...">
@@ -111,6 +112,7 @@
                                 </span>
                             </div>
                         </form>
+                        <!-- Sağ üst butonlar (Navbar)-->
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
@@ -153,94 +155,88 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-
-                                <div class="row justify-content-between customMargin">
-                                    <h4 class="card-title">Üyeler Tablosu</h4>
-                                    <a href="../examples/uye_olustur.html">
-                                        <button class="btn btn-primary btn-block col-md-2">ÜYE OLUŞTUR +</button>
-
-                                    </a>
-                                    
-
-                                </div>
-                              
+                                <h5 class="title">Üye Ekle</h5>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class=" text-primary">
-                                            <th>
-                                                Kullanıcı
-                                            </th>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Üye Adı</label>
+                                                <input type="email" class="form-control" placeholder="Ad..">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Üye Soyadı</label>
+                                                <input type="text" class="form-control" placeholder="Soyad..">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>E-Mail Adresi</label>
+                                                <input type="text" class="form-control" placeholder="E-mail..">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group customVerticalMargin">
+                                                <label for="img">Resim Seçiniz</label>
+                                                <input type="file" id="img" name="img" accept="image/*">
+                                                <input type="submit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="row">
+                                        <div class="col-md-4">
+
+                                            <button class="btn btn-primary btn-block">Üyeyi Kaydet</button>
+
+                                        </div>
                                         
-                                            <th>
-                                                E-Posta
-                                            </th>
-                                            <th>
-                                                Hangi Bölüm
-                                            </th>
-                                            <th class="text-right">
-                                                Üye Detay
-                                            </th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar border-gray" src="../assets/img//mike.jpg" alt="..."> Alican Kesen
-                                                   
-                                                </td>
-                                                <td>
-                                                    example@gmail.com
-                                                </td>
-                                                <td>
-                                                   15
-                                                </td>
-                                                <td class="text-right">
-                                                    <a href="../examples/uye_detay.html">
-                                                        <button class="btn btn-primary btn-block">ÜYE DETAY</button>
-                                                    </a>
-                                                        
-                                                  
-                                                </td>
-                                               
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar border-gray" src="../assets/img//fotom.jpg" alt="...">  Mehmet Öztürk
-                                                </td>
-                                                <td>
-                                                    mehmet@gmail.com
-                                                </td>
-                                                <td>
-                                                    13
-                                                </td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-primary btn-block">ÜYE DETAY</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar border-gray" src="../assets/img//fotom2.jpg" alt="..."> Polat Alemdar
-                                                </td>
-                                                <td>
-                                                    polat@gmail.com
-                                                </td>
-                                                <td>
-                                                    5
-                                                </td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-primary btn-block">ÜYE DETAY</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    
-               
-            
+                  
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="https://www.creative-tim.com">
+                                    Creative Tim
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://presentation.creative-tim.com">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://blog.creative-tim.com">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="copyright">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>, Designed by
+                        <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </body>

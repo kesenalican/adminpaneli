@@ -16,7 +16,6 @@
     <link href="../assets/css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
-    <link href="../assets/css/custom.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -41,14 +40,14 @@
                             <p>ADMİN PANELİ</p>
                         </a>
                     </li>
-                    <li class="active">
-                        <a href="../examples/tables.html">
+                    <li>
+                        <a href="../tables.html">
                             <i class="now-ui-icons users_single-02"></i>
                             <p>Üyeler</p>
                         </a>
                     </li>
                    
-                    <li>
+                    <li class="active">
                         <a href="../examples/map.html">
                             <i class="now-ui-icons design_bullet-list-67"></i>
                             <p>BÖLÜMLER</p>
@@ -72,8 +71,8 @@
                             <p>MAPS</p>
                         </a>
                     </li>
+                    
                    
-                  
                     <li class="active-pro">
                         <a href="../examples/upgrade.html">
                             <i class="now-ui-icons arrows-1_cloud-download-93"></i>
@@ -95,7 +94,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">Üyeler</a>
+                        <a class="navbar-brand" href="#pablo">Bölüm Detay</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -145,7 +144,9 @@
                     </div>
                 </div>
             </nav>
+            
             <!-- End Navbar -->
+            
             <div class="panel-header panel-header-sm">
             </div>
             <div class="content">
@@ -153,83 +154,87 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-
-                                <div class="row justify-content-between customMargin">
-                                    <h4 class="card-title">Üyeler Tablosu</h4>
-                                    <a href="../examples/uye_olustur.html">
-                                        <button class="btn btn-primary btn-block col-md-2">ÜYE OLUŞTUR +</button>
-
-                                    </a>
-                                    
-
-                                </div>
-                              
+                                <h4 class="card-title">Meslekler Bölümü</h4>
+                                    <button class="btn btn-primary btn-block col-md-4"id="myBtn">SINAV OLUŞTUR +</button>
+                                    <!-- Kendi Kodlarım-->
+                                    <div id="myModal" class="modal col-md-8">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                          <span class="close">&times;</span>
+                                          <p>Lütfen Soru Tipini Seçiniz</p>
+                                          <a href="../examples/dogru_anlami_isaretle.html">
+                                            <button class="btn btn-primary btn-block col-md-4">Doğru Anlamı İşaretle</button>
+                                        </a>
+                                        <a href="../examples/turkce_yaz.html">
+                                            <button class="btn btn-primary btn-block col-md-4">Türkçe Yaz</button>
+                                        </a>
+                                        <a href="../examples/eksik_kelime.html">
+                                            
+                                            <button class="btn btn-primary btn-block col-md-4">Eksik Kelime</button>
+                                        </a>
+                                        <a href="../examples/turkceye_cevir.html">
+                                            <button class="btn btn-primary btn-block col-md-4">Türkçe'ye Çevir</button>
+                                        </a>
+                                              
+                                                
+                                                 
+                                        </div>
+                                      </div>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class=" text-primary">
                                             <th>
-                                                Kullanıcı
-                                            </th>
-                                        
-                                            <th>
-                                                E-Posta
-                                            </th>
-                                            <th>
-                                                Hangi Bölüm
-                                            </th>
-                                            <th class="text-right">
-                                                Üye Detay
+                                                Sınav Adları
                                             </th>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <img class="avatar border-gray" src="../assets/img//mike.jpg" alt="..."> Alican Kesen
+                                                    <a href="">
+                                                        Meslekler-1 
+
+                                                        
+                                                    </a>
+                                                 
                                                    
                                                 </td>
+                                            </tr>
+                                            <tr>
                                                 <td>
-                                                    example@gmail.com
-                                                </td>
-                                                <td>
-                                                   15
-                                                </td>
-                                                <td class="text-right">
-                                                    <a href="../examples/uye_detay.html">
-                                                        <button class="btn btn-primary btn-block">ÜYE DETAY</button>
-                                                    </a>
+                                                    <a href="">
+                                                        Meslekler-2 
+
                                                         
-                                                  
-                                                </td>
-                                               
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar border-gray" src="../assets/img//fotom.jpg" alt="...">  Mehmet Öztürk
-                                                </td>
-                                                <td>
-                                                    mehmet@gmail.com
-                                                </td>
-                                                <td>
-                                                    13
-                                                </td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-primary btn-block">ÜYE DETAY</button>
+                                                    </a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <img class="avatar border-gray" src="../assets/img//fotom2.jpg" alt="..."> Polat Alemdar
+                                                    <a href="">
+                                                        Meslekler-3 
+
+                                                        
+                                                    </a>
                                                 </td>
+                                            </tr>
+                                            <tr>
                                                 <td>
-                                                    polat@gmail.com
+                                                    <a href="">
+                                                        Meslekler-4 
+
+                                                        
+                                                    </a>
                                                 </td>
+                                            </tr>
+                                            <tr>
                                                 <td>
-                                                    5
-                                                </td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-primary btn-block">ÜYE DETAY</button>
+                                                    <a href="">
+                                                        Meslekler-5 
+
+                                                        
+                                                    </a>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -239,11 +244,38 @@
                         </div>
                     </div>
                     
-               
-            
-        </div>
-    </div>
+                
+    
 </body>
+
+<!-- Alert dialog Soru tipi seçme js kodları -->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
 <script src="../assets/js/core/popper.min.js"></script>
@@ -259,5 +291,11 @@
 <script src="../assets/js/now-ui-dashboard.js?v=1.0.1"></script>
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/demo/demo.js"></script>
+<script>
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initGoogleMaps();
+    });
+</script>
 
 </html>
