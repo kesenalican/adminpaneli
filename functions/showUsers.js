@@ -28,13 +28,18 @@ database.on("value", function (snapshot) {
         uyedetay_td.className = "text-right";
 
         let link_UyeDetay_a = document.createElement("a");
-        link_UyeDetay_a.href = "../examples/uye_detay.html";
+        link_UyeDetay_a.href = '../examples/uye_detay.html?email=%s'.replace('%s', email);
+
+        
+        
 
         uyedetay_td.appendChild(link_UyeDetay_a);
 
         let button_UyeDetay = document.createElement("button");
         button_UyeDetay.className = "btn btn-primary btn-block";
-        button_UyeDetay.innerText = "ÜYE DETAY"
+        button_UyeDetay.innerText = "ÜYE DETAY";
+        
+        
 
         link_UyeDetay_a.appendChild(button_UyeDetay);
 
@@ -44,6 +49,7 @@ database.on("value", function (snapshot) {
         tr.appendChild(uyedetay_td)
 
         uyeTable.appendChild(tr);
+
 
         });
     });
