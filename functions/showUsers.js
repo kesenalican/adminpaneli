@@ -31,8 +31,6 @@ database.on("value", function (snapshot) {
         link_UyeDetay_a.href = '../examples/uye_detay.html?email=%s'.replace('%s', email);
 
         
-        
-
         uyedetay_td.appendChild(link_UyeDetay_a);
 
         let button_UyeDetay = document.createElement("button");
@@ -40,7 +38,6 @@ database.on("value", function (snapshot) {
         button_UyeDetay.innerText = "ÜYE DETAY";
         
         
-
         link_UyeDetay_a.appendChild(button_UyeDetay);
 
         tr.appendChild(img_td)

@@ -16,6 +16,7 @@
     <link href="../assets/css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -40,14 +41,14 @@
                             <p>ADMİN PANELİ</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="../examples/tables.html">
                             <i class="now-ui-icons users_single-02"></i>
                             <p>Üyeler</p>
                         </a>
                     </li>
-                   
-                    <li class="active">
+                    
+                    <li>
                         <a href="../examples/map.html">
                             <i class="now-ui-icons design_bullet-list-67"></i>
                             <p>BÖLÜMLER</p>
@@ -68,11 +69,11 @@
                     <li>
                         <a href="../examples/icons.html">
                             <i class="now-ui-icons education_atom"></i>
-                            <p>MAPS</p>
+                            <p>BÖLÜMLER</p>
                         </a>
                     </li>
-                    
-                 
+                   
+                  
                     <li class="active-pro">
                         <a href="../examples/upgrade.html">
                             <i class="now-ui-icons arrows-1_cloud-download-93"></i>
@@ -94,7 +95,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">Bölümler</a>
+                        <a class="navbar-brand" href="#pablo">Üye Oluştur</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -102,6 +103,7 @@
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <!-- Arama Kısmı -->
                         <form>
                             <div class="input-group no-border">
                                 <input type="text" value="" class="form-control" placeholder="Ara...">
@@ -110,6 +112,7 @@
                                 </span>
                             </div>
                         </form>
+                        <!-- Sağ üst butonlar (Navbar)-->
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
@@ -144,9 +147,7 @@
                     </div>
                 </div>
             </nav>
-            
             <!-- End Navbar -->
-            
             <div class="panel-header panel-header-sm">
             </div>
             <div class="content">
@@ -154,75 +155,107 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                
-                                    
-                                        <h4 class="card-title">Bölümler Tablosu</h4>
-                                        <button class="btn btn-primary btn-block col-md-3" >BÖLÜM OLUŞTUR +</button>
-                                
+                                <h5 class="title">Bölüm Ekle</h5>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class=" text-primary">
-                                            <th>
-                                                Bölüm Adları
-                                            </th>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Bölüm Adı</label>
+                                                <input id = "bolumName" type="bolumName" class="form-control" placeholder="Bölüm Adı">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group customVerticalMargin">
+                                                <label for="img">Resim Seçiniz</label>
+                                                <input id = "userImage" type="file" name="img" accept="image/*">
+                                                <input type="submit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="row">
+                                        <div class="col-md-4">
+
+                                            <button id = "createNewBolum" class="btn btn-primary btn-block">Bölümü Kaydet</button>
+
+                                        </div>
                                         
-                                            <th>
-                                                Sınav Sayısı
-                                            </th>
-                                            <th>
-                                                Bölüm Detay
-                                            </th>
-                                        </thead>
-                                        <tbody name= "bcd">
-                
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    
-                   
+                  
                 </div>
             </div>
-        
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="https://www.creative-tim.com">
+                                    Creative Tim
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://presentation.creative-tim.com">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://blog.creative-tim.com">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="copyright">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>, Designed by
+                        <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                    </div>
+                </div>
+            </footer>
         </div>
-           
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
-    
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
-    
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyAQLZskKTK8dy2m5l4s_omVCu9dX-Qx2TU",
-        authDomain: "ingilizce-uygulama.firebaseapp.com",
-        databaseURL: "https://ingilizce-uygulama.firebaseio.com",
-        projectId: "ingilizce-uygulama",
-        storageBucket: "ingilizce-uygulama.appspot.com",
-        messagingSenderId: "1030944748630",
-        appId: "1:1030944748630:web:886ee4a9bea6a2c903b7f7",
-        measurementId: "G-B7VLPNCBSN"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
 
-    </script>
-    <script src="../functions/showBolum.js"></script>
-    <script src="../functions/showNewBolumScreen.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAQLZskKTK8dy2m5l4s_omVCu9dX-Qx2TU",
+    authDomain: "ingilizce-uygulama.firebaseapp.com",
+    databaseURL: "https://ingilizce-uygulama.firebaseio.com",
+    projectId: "ingilizce-uygulama",
+    storageBucket: "ingilizce-uygulama.appspot.com",
+    messagingSenderId: "1030944748630",
+    appId: "1:1030944748630:web:886ee4a9bea6a2c903b7f7",
+    measurementId: "G-B7VLPNCBSN"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="../functions/addNewBolum.js"></script>
+
 </body>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
-<script src="../assets/js/sweet_alert.js"></script>
 <script src="../assets/js/core/popper.min.js"></script>
 <script src="../assets/js/core/bootstrap.min.js"></script>
 <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
@@ -236,11 +269,5 @@
 <script src="../assets/js/now-ui-dashboard.js?v=1.0.1"></script>
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/demo/demo.js"></script>
-<script>
-    $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initGoogleMaps();
-    });
-</script>
 
 </html>
