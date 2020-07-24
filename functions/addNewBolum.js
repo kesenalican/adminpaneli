@@ -30,7 +30,7 @@ addNewUserButton.addEventListener("click",(e) => {
     bolumAdi: bolumName.value,
     bolumIcon : "https://icon-library.com/images/icon-english/icon-english-2.jpg",
     bolumSinavSayisi : 0,
-    bolumSinavlari : []
+    bolumSinavlari : {},
     
     }) 
     

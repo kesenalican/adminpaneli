@@ -4,12 +4,14 @@ const bolumTable = document.getElementsByName("bcd")[0];
 
 
     database.on("value", function (snapshot) {
+
         snapshot.forEach(function(childSnapshot) {
         
         // bölüm bilgileri çekme
         var bolumAdi = childSnapshot.val()["bolumAdi"];
         var bolumSinavSayisi = childSnapshot.val()["bolumSinavSayisi"];
-  
+        var bolumId = childSnapshot.key;
+           
                 
         // tr elementini oluşturma
         let tr = document.createElement("tr");
@@ -24,7 +26,7 @@ const bolumTable = document.getElementsByName("bcd")[0];
         bolumdetay_td.className = "text-right";
 
         let link_bolumDetay_a = document.createElement("a");
-        link_bolumDetay_a.href = '../examples/bolum_detay.html?bolumAdi=%s'.replace('%s', bolumAdi);
+        link_bolumDetay_a.href = '../examples/bolum_detay.html?bolumId=%s?bolumName=%d'.replace('%s', bolumId).replace("%d", bolumAdi);
 
         bolumdetay_td.appendChild(link_bolumDetay_a);
 
