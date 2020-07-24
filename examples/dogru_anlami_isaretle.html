@@ -148,7 +148,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Soruyu Giriniz</label>
-                                                <input type="email" class="form-control" placeholder="Soru..">
+                                                <input id = "soruTextDAI" type="text" class="form-control" placeholder="Soru..">
                                             </div>
                                         </div>
                                     </div>
@@ -156,13 +156,13 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Doğru Şık</label>
-                                                <input type="text" class="form-control" placeholder="Doğru Şık">
+                                                <input id = "trueAnswerDAI" type="text" class="form-control" placeholder="Doğru Şık">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>1. Yanlış Şık</label>
-                                                <input type="text" class="form-control" placeholder="Yanlış Şık">
+                                                <input id = "falseAnswerDAI1" type="text" class="form-control" placeholder="Yanlış Şık">
                                             </div>
                                         </div>
                                     </div>
@@ -170,7 +170,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>2. Yanlış Şık</label>
-                                                <input type="text" class="form-control" placeholder="Yanlış Şık">
+                                                <input id = "falseAnswerDAI2" type="text" class="form-control" placeholder="Yanlış Şık">
                                             </div>
                                         </div>
                                     </div>
@@ -178,7 +178,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
 
-                                            <button class="btn btn-primary btn-block">Soruyu Kaydet</button>
+                                            <button id = "soruEkleButtonDAI" class="btn btn-primary btn-block">Soruyu Kaydet</button>
 
                                         </div>
                                         
@@ -223,7 +223,32 @@
             </footer>
         </div>
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAQLZskKTK8dy2m5l4s_omVCu9dX-Qx2TU",
+    authDomain: "ingilizce-uygulama.firebaseapp.com",
+    databaseURL: "https://ingilizce-uygulama.firebaseio.com",
+    projectId: "ingilizce-uygulama",
+    storageBucket: "ingilizce-uygulama.appspot.com",
+    messagingSenderId: "1030944748630",
+    appId: "1:1030944748630:web:886ee4a9bea6a2c903b7f7",
+    measurementId: "G-B7VLPNCBSN"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="../functions/addSoruDAI.js"></script>
 </body>
+
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
 <script src="../assets/js/core/popper.min.js"></script>

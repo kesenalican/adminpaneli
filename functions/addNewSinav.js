@@ -4,6 +4,9 @@ const sinavEklebutton = document.getElementById("sinavEklebutton");
 const queryString = window.location.search;
 var bolumId = queryString.split("?")[1].substring(8)
 
+
+
+
 function randomizeInteger(min, max) {
     if(max == null) {
       max = (min == null ? Number.MAX_SAFE_INTEGER : min);
@@ -22,6 +25,11 @@ function randomizeInteger(min, max) {
 
 var sinavId = randomizeInteger(100000,9999999);
 
+
+
+
+
+
 const database = firebase.database();
 sinavEklebutton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -30,11 +38,18 @@ sinavEklebutton.addEventListener("click", (e) => {
     database.ref("/bolumler/" + bolumId + "/sinavlar/" + sinavId).set({
         sinavAdi : sinavAdiInput.value})
 
-    //Bolumler sayfasına yönlendirir
-    document.location.href = '../examples/map.html'; 
+    
+    
+    database.ref("/bolumler/" + bolumId).on("value", function (snapshot) {
 
-
+      x = snapshot.val()["bolumSinavSayisi"]
+      
     })
+
+    database.ref("/bolumler/"+ bolumId ).update({bolumSinavSayisi : x+1 }) ;
+    document.location.href = '../examples/map.html';  
+
+})
 
 
 
