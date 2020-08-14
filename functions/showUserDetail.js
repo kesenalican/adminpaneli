@@ -1,21 +1,35 @@
-const database = firebase.database().ref("/uyeler/");
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyAQLZskKTK8dy2m5l4s_omVCu9dX-Qx2TU",
+    authDomain: "ingilizce-uygulama.firebaseapp.com",
+    databaseURL: "https://ingilizce-uygulama.firebaseio.com",
+    projectId: "ingilizce-uygulama",
+    storageBucket: "ingilizce-uygulama.appspot.com",
+    messagingSenderId: "1030944748630",
+    appId: "1:1030944748630:web:886ee4a9bea6a2c903b7f7",
+    measurementId: "G-B7VLPNCBSN"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
 
+ 
 const tbody = document.getElementsByName("ssg")[0];
 
 // URL'de gönderilen email değişkenini bulur.
 const queryString = window.location.search;
 var uyeEmaili = queryString.substring(7);
+ 
 
-
-database.on("value", function (snapshot) { 
+db.collection("uyeler").get().then((snapshot) => {
     snapshot.forEach(function (childSnapshot) { 
 
-        if (childSnapshot.val()["uyeEmaili"] == uyeEmaili) {
+        if (childSnapshot.data()["email"] == uyeEmaili) {
             
             // Diğer üye bilgilerini email yardımı ile bulur.
-            uyeAdi = childSnapshot.val()["uyeAdi"];
-            uyeSoyadi = childSnapshot.val()["uyeSoyadi"];
-            uyeBolum = childSnapshot.val()["uyeBolum"];
+            uyeAdi = childSnapshot.data()["isim"];
+            uyeSoyadi = childSnapshot.data()["isim"];
+            uyeBolum = childSnapshot.data()["hangiBolum"];
 
             // Üye detay kısmının html'ini oluşturur.
             let tr = document.createElement("tr");

@@ -1,17 +1,30 @@
-const database = firebase.database().ref("/uyeler/");
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyAQLZskKTK8dy2m5l4s_omVCu9dX-Qx2TU",
+    authDomain: "ingilizce-uygulama.firebaseapp.com",
+    databaseURL: "https://ingilizce-uygulama.firebaseio.com",
+    projectId: "ingilizce-uygulama",
+    storageBucket: "ingilizce-uygulama.appspot.com",
+    messagingSenderId: "1030944748630",
+    appId: "1:1030944748630:web:886ee4a9bea6a2c903b7f7",
+    measurementId: "G-B7VLPNCBSN"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+
+
 const uyeTable = document.getElementsByName("ssf")[0]
 
 
+db.collection("uyeler").get().then((snapshot) => {
+    snapshot.forEach(function (childSnapshot) {
 
-database.on("value", function (snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-        
         // üye bilgileri çekme
-        var isim = childSnapshot.val()["uyeAdi"] + " "+childSnapshot.val()["uyeSoyadi"];
-        var email = childSnapshot.val()["uyeEmaili"];
-        var bolum = childSnapshot.val()["uyeBolum"];
-                
-        
+        var isim = childSnapshot.data()["isim"] + " " + childSnapshot.data()["soyisim"];
+        var email = childSnapshot.data()["email"];
+        var bolum = childSnapshot.data()["hangiBolum"];
+
         // tr elementini oluşturma
         let tr = document.createElement("tr");
 
@@ -30,14 +43,14 @@ database.on("value", function (snapshot) {
         let link_UyeDetay_a = document.createElement("a");
         link_UyeDetay_a.href = '../examples/uye_detay.html?email=%s'.replace('%s', email);
 
-        
+
         uyedetay_td.appendChild(link_UyeDetay_a);
 
         let button_UyeDetay = document.createElement("button");
         button_UyeDetay.className = "btn btn-primary btn-block";
         button_UyeDetay.innerText = "ÜYE DETAY";
-        
-        
+
+
         link_UyeDetay_a.appendChild(button_UyeDetay);
 
         tr.appendChild(img_td)
@@ -48,9 +61,7 @@ database.on("value", function (snapshot) {
         uyeTable.appendChild(tr);
 
 
-        });
     });
-
-
+});
 
 
