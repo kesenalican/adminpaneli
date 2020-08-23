@@ -16,26 +16,31 @@ var db = firebase.firestore();
 
 const bolumTable = document.getElementsByName("bcd")[0];
 
- 
-db.collection("bolumler").get().then((snapshot) => {
 
-        snapshot.forEach(function(childSnapshot) {
-        
+db.collection("bolumler").get().then((snapshot) => {
+    console.log("bla");
+    snapshot.forEach(function (childSnapshot) {
+        // REFERANS NESNESİ
+        ref = childSnapshot.ref.path
+
         // bölüm bilgileri çekme
         var bolumAdi = childSnapshot.data()["name"];
         var bolumSinavSayisi = 1; // şimdilik
         var bolumId = childSnapshot.id;
-           
-                
+
+
         // tr elementini oluşturma
         let tr = document.createElement("tr");
 
+        // BÖLÜM ADI
         let bolumAdi_td = document.createElement("td");
         bolumAdi_td.innerText = bolumAdi;
 
+        // SINAV SAYISI
         let bolumSinavSayisi_td = document.createElement("td");
         bolumSinavSayisi_td.innerText = bolumSinavSayisi;
 
+        // BÖLÜM DETAY
         let bolumdetay_td = document.createElement("td");
         bolumdetay_td.className = "text-right";
 
@@ -47,17 +52,31 @@ db.collection("bolumler").get().then((snapshot) => {
         let button_bolumDetay = document.createElement("button");
         button_bolumDetay.className = "btn btn-primary btn-block";
         button_bolumDetay.innerText = "BÖLÜM DETAY";
-        
-        
+
         link_bolumDetay_a.appendChild(button_bolumDetay);
 
+        // KALDIR
+        let kaldir_td = document.createElement("td");
+        kaldir_td.className = "text-center";
+        kaldir_td.innerHTML = `<a onclick="remove('%PATH%'); return false;" href =''>Kaldır</a>`
+        .replace("%PATH%", ref);
+
+
+        // TD'LERİ EKLE
         tr.appendChild(bolumAdi_td)
         tr.appendChild(bolumSinavSayisi_td)
         tr.appendChild(bolumdetay_td)
+        tr.appendChild(kaldir_td)
 
         bolumTable.appendChild(tr);
 
 
-        });
     });
- 
+});
+
+
+function remove(path) {
+    db.doc(path).delete().then(function () {
+        location.reload();
+    });
+}

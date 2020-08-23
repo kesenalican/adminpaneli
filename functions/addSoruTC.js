@@ -20,7 +20,7 @@ var db = firebase.firestore();
 
 const soruText = document.getElementById("soruTextTC");
 const trueAnswer = document.getElementById("trueAnswerTC");
-const sorutype = "turkceyeCevir";
+const soruTipi = "turkceyeCevir";
 
 const soruEkleButton = document.getElementById("soruEkleButtonTC");
 
@@ -49,7 +49,7 @@ soruEkleButton.addEventListener("click", (e) => {
   db.doc("/bolumler/%%d/sinavlar/%%y/sorular/%%e".replace("%%d", bolumId).replace("%%y", sinavId).replace("%%e", soruId)).set({
     ingilizceKelime: soruText.value,
     turkceKelime: trueAnswer.value,
-    soruType: sorutype
+    soruTipi: soruTipi
   }).then(function () {
     //Uyeler sayfasına yönlendirir
     document.location.href = '../examples/map.html';

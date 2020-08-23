@@ -22,7 +22,7 @@ const soruText = document.getElementById("soruTextEK");
 const trueAnswer = document.getElementById("trueAnswerEK");
 const falseAnswer1 = document.getElementById("falseAnswerEK1");
 const falseAnswer2 = document.getElementById("falseAnswerEK2");
-const sorutype = "eksikKelime";
+const soruTipi = "eksikKelime";
 
 const soruEkleButton = document.getElementById("soruEkleButtonEK");
 
@@ -53,7 +53,7 @@ soruEkleButton.addEventListener("click", (e) => {
     eksikKelime: trueAnswer.value,
     yanlis1: falseAnswer1.value,
     yanlis2: falseAnswer2.value,
-    soruType: sorutype
+    soruTipi: soruTipi
   }).then(function () {
 
     //Uyeler sayfasına yönlendirir

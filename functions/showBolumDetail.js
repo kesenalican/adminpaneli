@@ -23,52 +23,46 @@ const sinavTable = document.getElementsByName("ffc")[0];
 
 index = 0
 index_inner = 0
-console.log(bolumId);
 db.collection("bolumler").doc(bolumId).collection("sinavlar").get().then((snapshot) => {
     snapshot.forEach(function (childSnapshot) {
+        sinavId = childSnapshot.id
 
-    sinavId = childSnapshot.id
-    sinavName = childSnapshot.data()["sira"] 
+        // DATA
+        sinavName = childSnapshot.data()["sinavAdi"]
 
+        // REFERANS NESNESİ
+        ref = childSnapshot.ref.path
 
-    let tr = document.createElement("tr");
-    html = ' <tr><td><a href="">%ff</a></td><td><button name = "rtd" class="btn btn-primary btn-block col-md-4 "id="mySoruEkleButton">Soru Ekle</button><div id="myModal" class="modal col-md-8"><div class="modal-content"><span class="close">&times;</span><p>Lütfen Soru Tipini Seçiniz</p><a href="../examples/dogru_anlami_isaretle.html?sinavId=%yy?bolumId=%tt"><button class="btn btn-primary btn-block col-md-4">Doğru Anlamı İşaretle</button></a><a href="../examples/turkce_yaz.html?sinavId=%KK?bolumId=%LL"><button class="btn btn-primary btn-block col-md-4">Türkçe Yaz</button></a><a href="../examples/eksik_kelime.html?sinavId=%MM?bolumId=%NN"><button class="btn btn-primary btn-block col-md-4">Eksik Kelime</button></a><a href="../examples/turkceye_cevir.html?sinavId=%PP?bolumId=%OO"><button class="btn btn-primary btn-block col-md-4">Türkçeye Çevir</button></a></div></div></td></td></tr>'.replace("%ff", sinavName).replace("%yy", sinavId).replace("%tt", bolumId).replace("%KK", sinavId).replace("%LL", bolumId).replace("%MM", sinavId).replace("%NN", bolumId).replace("%PP", sinavId).replace("%OO", bolumId);
-
-    tr.innerHTML = html;
-
-    sinavTable.appendChild(tr);
-
-    // Alert dialog Soru tipi seçme js kodları
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementsByName("rtd")[index_inner];
+        // DETAY LİNKİNİ OLUŞTUR
+        var sinavLink = "sinav_detay.html?bolumId=%BOLUMID&bolumName=%BOLUMNAME&sinavId=%SINAVID&sinavName=%SINAVNAME"
+            .replace("%BOLUMID", bolumId)
+            .replace("%BOLUMNAME", bolumName)
+            .replace("%SINAVID", sinavId)
+            .replace("%SINAVNAME", sinavName);
 
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[index_inner];
+        // HTML'İ HAZIRLA
+        let tr = document.createElement("tr");
 
+        html = `<tr>
+        <td><a href="` + sinavLink + `">%ff</a></td>
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
+        <td><a href="` + sinavLink + `">
+        <button class="btn btn-primary btn-block col-md-4">
+                    Sınav Detayı
+                    </button></a>
+        </td>
+        <td>
+        <td><a onclick="remove('%PATH%'); return false;" href="">Kaldır</a> </td>
+        </td>
+    </tr>`
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
+        html = html.replace("%ff", sinavName).replace("%PATH%", ref);
+        tr.innerHTML = html;
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+        // EKRANA BAS
+        sinavTable.appendChild(tr);
 
-    }
-
-    index_inner += 1
 
 
     });
@@ -76,3 +70,9 @@ db.collection("bolumler").doc(bolumId).collection("sinavlar").get().then((snapsh
 
 });
 
+
+function remove(path) {
+    db.doc(path).delete().then(function () {
+        location.reload();
+    });
+}

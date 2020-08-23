@@ -7,7 +7,8 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Bölümler | Yönetim Paneli</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -24,14 +25,14 @@
             <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
-    <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-            MY
-        </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-           Misha Yazılım
-        </a>
-    </div>
+            <div class="logo">
+                <a href="" class="simple-text logo-mini">
+                    MY
+                </a>
+                <a href="" class="simple-text logo-normal">
+                    Misha Yazılım
+                </a>
+            </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li>
@@ -46,7 +47,7 @@
                             <p>Üyeler</p>
                         </a>
                     </li>
-                   
+
                     <li class="active">
                         <a href="../examples/map.html">
                             <i class="now-ui-icons design_bullet-list-67"></i>
@@ -82,17 +83,18 @@
                         </div>
                         <a class="navbar-brand" href="#pablo">Bölümler</a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                     </button>
-                    
+
                 </div>
             </nav>
-            
+
             <!-- End Navbar -->
-            
+
             <div class="panel-header panel-header-sm">
             </div>
             <div class="content">
@@ -100,14 +102,14 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                
-                                    
-                                        <h4 class="card-title">Bölümler Tablosu</h4>
-                                        <a href="../examples/bolum_olustur.html">
-                                            <button class="btn btn-primary btn-block col-md-3" >BÖLÜM OLUŞTUR +</button>
-                                        </a>
-                                        
-                                
+
+
+                                <h4 class="card-title">Bölümler Tablosu</h4>
+                                <a href="../examples/bolum_olustur.html">
+                                    <button class="btn btn-primary btn-block col-md-3">BÖLÜM OLUŞTUR +</button>
+                                </a>
+
+
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -116,38 +118,41 @@
                                             <th>
                                                 Bölüm Adları
                                             </th>
-                                        
+
                                             <th>
                                                 Sınav Sayısı
                                             </th>
                                             <th>
                                                 Bölüm Detay
                                             </th>
+                                            <th>
+                                                Kaldır
+                                            </th>
                                         </thead>
-                                        <tbody name= "bcd">
-                
+                                        <tbody name="bcd">
+
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                   
+
+
                 </div>
             </div>
-        
+
         </div>
-           
+
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase.js"></script>
-    
+
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
-    
-    <script src="../functions/showBolum.js"></script>
+
+    <script src="../functions/showBolumler.js"></script>
     <script src="../functions/showNewBolumScreen.js"></script>
 </body>
 <!--   Core JS Files   -->
@@ -167,7 +172,7 @@
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/demo/demo.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Javascript method's body can be found in assets/js/demos.js
         demo.initGoogleMaps();
     });

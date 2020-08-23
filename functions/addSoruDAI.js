@@ -22,7 +22,7 @@ const soruText = document.getElementById("soruTextDAI");
 const trueAnswer = document.getElementById("trueAnswerDAI");
 const falseAnswer1 = document.getElementById("falseAnswerDAI1");
 const falseAnswer2 = document.getElementById("falseAnswerDAI2");
-const sorutype = "dogruAnlam";
+const soruTipi = "dogruAnlam";
 
 const soruEkleButton = document.getElementById("soruEkleButtonDAI");
 
@@ -53,7 +53,7 @@ soruEkleButton.addEventListener("click", (e) => {
         turkceCumle: trueAnswer.value,
         yanlis1: falseAnswer1.value,
         yanlis2: falseAnswer2.value,
-        soruTipi: sorutype
+        soruTipi: soruTipi
     }).then(function () {
         document.location.href = '../examples/map.html'; 
 
